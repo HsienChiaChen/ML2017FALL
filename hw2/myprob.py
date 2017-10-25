@@ -107,7 +107,7 @@ def sigmoid(z):
 	res = 1/ (1.0+np.exp(-z))
 	return np.clip(res,1e-8,(1-1e-8))
 
-percentage = 0.1
+percentage = 0.2
 X_train, Y_train, X_valid, Y_valid = split_valid_data(data,label,percentage)
 X_train, Y_train = _shuffle(X_train,Y_train)
 
@@ -128,9 +128,6 @@ print(data1.shape)
 
 print("----- Calculate Mean and Covariance -----")
 
-#sumx = np.sum(data,axis = 0)
-#print("sum")
-#print(sumx)
 avg0 = np.average(data0,axis = 0)
 avg1 = np.average(data1,axis = 0)
 
@@ -156,16 +153,14 @@ for i in range(106):
 	x = (data1.transpose())[i] - avg1[i]
 	cov1[i][i] = np.dot(x,x.transpose())'''
 
-for i in range(len(avg0)):
-	cov0 += np.dot((data0-avg0).transpose(),(data0-avg0))
-for i in range(len(avg1)):
-	cov1 += np.dot((data1-avg1).transpose(),(data1-avg1))
+for i in range(len(data0)):
+	cov0 += np.dot(np.transpose([data0[i]-avg0]),[data0[i]-avg0])
+for i in range(len(data1)):
+	cov1 += np.dot(np.transpose([data1[i]-avg1]),[data1[i]-avg1])
 
 
-avg0 = np.array(avg0)
-avg1 = np.array(avg1)
-cov0 = np.array(cov0)/N0
-cov1 = np.array(cov1)/N1
+cov0 = cov0/N0
+cov1 = cov1/N1
 
 
 def sigmoid(t):
@@ -173,23 +168,22 @@ def sigmoid(t):
 
 cov = (N0*cov0 + N1*cov1)/(N0+N1)
 inverse = np.linalg.pinv(cov)
-print(inverse)
-w = np.dot((avg0 - avg1).transpose(),inverse) # 1*106
-b11 = -0.5*np.dot(avg0.transpose(),inverse) # 1*106
+print('---compute w---')
+w = np.dot(np.transpose(avg0 - avg1),inverse) # 1*106
+b11 = -0.5*np.dot(np.transpose(avg0),inverse) # 1*106
 b12 = np.dot(b11,avg0) # scalar
-b21 = 0.5*np.dot(avg1.transpose(),inverse) # 1*106
+b21 = 0.5*np.dot(np.transpose(avg1),inverse) # 1*106
 b22 = np.dot(b21,avg1) # scalar
 b3 = np.log(N0/N1) # scalar
 b = b12 + b22 + b3
 
-
-y = sigmoid(np.dot(w,X_valid.transpose()) + b )
+y = sigmoid(np.dot(w,np.transpose(X_valid)) + b )
 y = np.around(y)
 result = ( np.squeeze(Y_valid) == y)
 
 print("Valid acc = %f" % (float(result.sum())/len(result) )    )
 
-res = sigmoid( np.dot(w,testdata.transpose()) + b )
+res = sigmoid( np.dot(w,np.transpose(testdata)) + b )
 res = np.around(res)
 
 outputfile = open(argout,'w')
