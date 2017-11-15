@@ -72,11 +72,11 @@ model1 = sys.argv[3]
 model2 = sys.argv[4]
 model3 = sys.argv[5]
 model4 = sys.argv[6]
-model = []
-model.append(model1)
-model.append(model2)
-model.append(model3)
-model.append(model4)
+models = []
+models.append(model1)
+models.append(model2)
+models.append(model3)
+models.append(model4)
 
 
 print(">>>>> Loading Testing Data ...")
@@ -116,7 +116,8 @@ for modelpath in models:
 	else:
 		weight = weight*1.0/6
 	print("weight = "+ str(weight))
-	modelfile = os.path.join(path,modelpath)
+	#modelfile = os.path.join(path,modelpath)
+	modelfile = modelpath
 	model = load_model(modelfile)
 	model.load_weights(modelfile)
 	model.compile(loss = 'categorical_crossentropy',optimizer = 'adam', metrics=['accuracy'])
