@@ -12,8 +12,9 @@ img_path = sys.argv[2]
 
 data = []
 r_img = np.array(skimage.io.imread(os.path.join(dir_path,img_path)),np.float32)
-for i in range(415):
-	file_name = os.path.join(dir_path,(str(i) + ".jpg"))
+list_img = os.listdir(dir_path)
+for i in range(len(list_img)):
+	file_name = os.path.join(dir_path,list_img[i])
 	data.append(np.array(skimage.io.imread(file_name),np.float32).flatten())
 
 avg_face = np.mean(data,axis = 0).reshape(600,600,3)
