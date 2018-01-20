@@ -19,7 +19,7 @@ final/README.md
 ## Usage (Kaggle Reproduced, do this part)
 You need to change to directory to `src/` first.
 
-1. testing:
+1. testing (do this part for reproduced):
 
 	`bash test.sh <testing data file path> <output result file path>`
 
