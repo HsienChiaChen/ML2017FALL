@@ -10,6 +10,8 @@
 ## Constructure
 `final/README.md`
 
+`final/Report`
+
 `final/src/.` -> source code which can show kaggle score
 
 `final/src/Joes/` -> other methods we try
