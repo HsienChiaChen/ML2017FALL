@@ -35,8 +35,9 @@ You need to change to directory to `src/` first.
 	`bash train.sh ../provideData/testing_data.csv ../predict.csv`
 
 
-## Usage (other implement method)
+## Usage (other implement method, for report and not for reproduced)
 You need to change to directory to `src/Joe/` and put the `provideData/` in `src/Joe/` first.
+You need to create `corpus.txt` from the 1. above. and put it in `src/Joe`.
 
 1. tf-idf:
 	
@@ -50,4 +51,9 @@ You need to change to directory to `src/Joe/` and put the `provideData/` in `src
 
 	`bash average.sh`
 
+You need to change to directory to `src/Sun/` and put the `provideData/` in `src/Sun/` first.
+
+4. `python3 create_vector.py`
+
+5. `python3 w2v_rnn.py` : this method should have enough memory.
 
