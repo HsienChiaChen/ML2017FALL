@@ -2,13 +2,10 @@
 
 ## Import Package
 
-`numpy` 1.13.3
-`scipy` 0.19.1
-`jieba` 0.39
-`gensim` 3.1.0
-`Keras` 2.0.8
-`scikit-learn` 0.19.1
-`word2vec` 0.9.2
+|`numpy`|`scipy`|`jieba`|`gensim`|`Keras`|`scikit-learn`|`word2vec`|
+--------------------------------------------------------------------
+|1.13.3 |0.19.1 | 0.39  | 3.1.0  | 2.0.8 |    0.19.1    |  0.9.2   |
+
 
 ## Constructure
 final/README.md
