@@ -2,10 +2,8 @@
 
 ## constructure
 final/README.md
-
-     /src/. -> source code which can show kaggle score
-
-     /src/Joes -> other methods we try
+final/src/. -> source code which can show kaggle score
+final/src/Joes -> other methods we try
      
 ## usage
 1. testing:
