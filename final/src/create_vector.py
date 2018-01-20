@@ -3,7 +3,6 @@ import sys
 import os  #mode = 3
 from gensim.models import word2vec
 import jieba
-import pyemd
 
 #str1 = "provideData/training_data/"
 str1 = sys.argv[1]
@@ -64,29 +63,3 @@ print("Corpus Output Successfully")
 sentences = word2vec.Text8Corpus("corpus.txt")
 model = word2vec.Word2Vec(sentences, size = 100,min_count=5,window = 7,sg = 1)
 model.save("word_vector.model.bin")
-#word_vectors = model.wv
-#word_vectors.save("W2V")
-#from gensim.models.keyedvectors import KeyedVectors
-#word_vectors = KeyedVectors.load("W2V")
-#print(word_vectors.doesnt_match(u'醫院 病人 護士 慶祝'.split()))
-
-
-'''model = word2vec.Word2Vec.load("m0116chinese.model.bin")
-sentence_1 = u'媽媽 煮飯'.split()
-sentence_2 = u'吃飯 雞湯'.split()
-sentence_3 = u'醫生 看病'.split()
-distance12 = model.wmdistance(sentence_1,sentence_2)
-distance13 = model.wmdistance(sentence_1,sentence_3)
-print(distance12)
-print(distance13)
-
-
-
-
-print("========================")
-print(model.n_similarity(u'上課 讀書'.split(),u'上課 睡覺'.split()))
-print(model.n_similarity(u'上課 讀書'.split(),u'回家 吃飯'.split()))
-
-
-#model.save("m0116chinese.model.bin")
-'''

@@ -3,10 +3,8 @@ import sys
 import csv
 import gensim
 from gensim.models import word2vec
-import _pickle as pk
 import jieba
 from scipy import spatial
-import pyemd
 
 # ================= #
 # File Path Setting #
