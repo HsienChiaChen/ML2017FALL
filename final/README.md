@@ -21,18 +21,17 @@ You need to change to directory to `src/` first.
 
 1. testing:
 
-	`bash test.sh <training data directory>`
+	`bash test.sh <testing data file path> <output result file path>`
 
 	For example:
-	`bash test.sh ../provideData/training_data/`
+	`bash test.sh ../provideData/testing_data.csv ../predict.csv`
 
 2. training:
 
-	`bash train.sh <testing data file path> <output result file path>`
+	`bash train.sh <training data directory>`
 
 	For example:
-	`bash train.sh ../provideData/testing_data.csv ../predict.csv`
-
+	`bash train.sh ../provideData/training_data/`
 
 ## Usage (other implement method, for report and not for reproduced)
 You need to change to directory to `src/Joe/` and put the `provideData/` in `src/Joe/` first.
