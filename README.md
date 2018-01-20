@@ -1,6 +1,7 @@
 # Machine Learning 2017
 
 |    No.   |                    Description                       |
+|----------|------------------------------------------------------|
 |Homework 1|PM 2.5 Prediction (Linear Regression)                 |
 |Homework 2|Income Prediction (Logistic Regression)               |
 |Homework 3|Image Classification (Convolutional Neural Network)   |
