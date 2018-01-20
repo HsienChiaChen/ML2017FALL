@@ -17,7 +17,7 @@ final/src/. -> source code which can show kaggle score
 
 final/src/Joes -> other methods we try
      
-## Usage (Kaggle Reproduce)
+## Usage (Kaggle Reproduced, do this part)
 You need to change to directory to `src/` first.
 
 1. testing:
