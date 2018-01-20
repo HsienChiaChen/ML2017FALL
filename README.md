@@ -10,5 +10,8 @@
 |Homework 6|PCA / Word Vector / Image Classfication (Unsupervised)|
 
 This is the repository of Machine Learning
+
 Own by Hsien Chia Chen
+
 2017 FALL (Last update: 2018/01/20)
+
