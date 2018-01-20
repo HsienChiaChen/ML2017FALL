@@ -13,9 +13,11 @@
 ## Constructure
 final/README.md
 
-final/src/. -> source code which can show kaggle score
+`final/src/.` -> source code which can show kaggle score
 
-final/src/Joes -> other methods we try
+`final/src/Joes` -> other methods we try
+
+`final/src/Sun` -> other methods we try
      
 ## Usage (Kaggle Reproduced, do this part)
 You need to change to directory to `src/` first.
