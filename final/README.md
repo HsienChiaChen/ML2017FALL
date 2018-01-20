@@ -2,7 +2,9 @@
 
 ## constructure
 final/README.md
+
 final/src/. -> source code which can show kaggle score
+
 final/src/Joes -> other methods we try
      
 ## usage
