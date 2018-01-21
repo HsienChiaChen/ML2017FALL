@@ -8,13 +8,15 @@
 
 
 ## Constructure
-final/README.md
+`final/README.md`
+
+`final/Report`
 
 `final/src/.` -> source code which can show kaggle score
 
-`final/src/Joes` -> other methods we try
+`final/src/Joes/` -> other methods we try
 
-`final/src/Sun` -> other methods we try
+`final/src/Sun/` -> other methods we try
      
 ## Usage (Kaggle Reproduced, do this part)
 You need to change to directory to `src/` first.
@@ -35,7 +37,7 @@ You need to change to directory to `src/` first.
 
 ## Usage (other implement method, for report and not for reproduced)
 You need to change to directory to `src/Joe/` and put the `provideData/` in `src/Joe/` first.
-You need to create `corpus.txt` from the 1. above. and put it in `src/Joe`.
+You need to create `corpus.txt` from the 2. above. and put it in `src/Joe`.
 
 1. tf-idf:
 	
